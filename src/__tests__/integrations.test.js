@@ -27,6 +27,7 @@ it('can fetch a list of comments and display them', (done) => {
             <App />
         </Root>
     );
+
     wrapped.find('.fetch-comments').simulate('click');
 
     moxios.wait( () => {
@@ -34,6 +35,5 @@ it('can fetch a list of comments and display them', (done) => {
         expect(wrapped.find('li').length).toEqual(4);
         done();
         wrapped.unmount();
-    });
-    
+    }); 
 })
